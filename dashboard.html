@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد | هوما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container dashboard-container">
+        <h2>داشبورد کاربری هوما</h2>
+        
+        <div class="dashboard-sections">
+            <div class="dashboard-card">
+                <i class="fas fa-comment-dots fa-3x"></i>
+                <h3>چت با هوما</h3>
+                <p>با دستیار هوشمند خود گفتگو کنید و دستورات صوتی و متنی دهید.</p>
+                <button class="btn" onclick="alert('قابلیت چت با GPT AI در حال راه‌اندازی است!')">شروع چت</button>
+                <div id="chat-interface" style="display: none; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                    <div id="chat-box" style="height: 200px; overflow-y: scroll; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; background-color: #f9f9f9; text-align: right; direction: rtl;">
+                        </div>
+                    <input type="text" id="chat-input" placeholder="پیام خود را اینجا بنویسید..." style="width: calc(100% - 70px); padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-left: 10px; text-align: right; direction: rtl;">
+                    <button id="send-button" class="btn" style="width: 60px; padding: 8px; font-size: 0.9em;">ارسال</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <i class="fas fa-folder-open fa-3x"></i>
+                <h3>مدیریت فایل‌ها</h3>
+                <p>فایل‌های خود را جستجو، ایجاد و سازماندهی کنید.</p>
+                <button class="btn" onclick="alert('قابلیت مدیریت فایل در دست توسعه است!')">مشاهده فایل‌ها</button>
+            </div>
+
+            <div class="dashboard-card">
+                <i class="fas fa-user-cog fa-3x"></i>
+                <h3>تنظیمات حساب</h3>
+                <p>اطلاعات کاربری و تنظیمات امنیتی خود را مدیریت کنید.</p>
+                <button class="btn" onclick="alert('قابلیت تنظیمات حساب در دست توسعه است!')">ویرایش پروفایل</button>
+            </div>
+
+            <div class="dashboard-card">
+                <i class="fas fa-chart-bar fa-3x"></i>
+                <h3>گزارش فعالیت</h3>
+                <p>سابقه تعاملات خود با هوما را مشاهده کنید.</p>
+                <button class="btn" onclick="alert('قابلیت گزارش فعالیت در دست توسعه است!')">مشاهده گزارش</button>
+            </div>
+            
+            <div class="dashboard-card">
+                <i class="fas fa-question-circle fa-3x"></i>
+                <h3>راهنما و پشتیبانی</h3>
+                <p>پاسخ سوالات خود را بیابید یا با تیم پشتیبانی در تماس باشید.</p>
+                <button class="btn" onclick="window.location.href='/contact'">دریافت راهنما</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+        // Optional: Toggle chat interface visibility
+        document.querySelector('.dashboard-card .btn').addEventListener('click', function() {
+            const chatInterface = document.getElementById('chat-interface');
+            if (chatInterface) {
+                chatInterface.style.display = chatInterface.style.display === 'none' ? 'block' : 'none';
+            }
+        });
+    </script>
+</body>
+</html>

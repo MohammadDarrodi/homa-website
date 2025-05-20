@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قیمت‌گذاری | هوما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container">
+        <section id="pricing">
+            <h2>پلن‌های قیمت‌گذاری هوما</h2>
+            <p class="section-description">از پلن‌های منعطف ما برای دستیابی به حداکثر پتانسیل هوما بهره‌مند شوید. هر پلن متناسب با نیازهای مختلف طراحی شده است.</p>
+
+            <div class="pricing-table">
+                <div class="pricing-plan">
+                    <h3>پلن پایه</h3>
+                    <div class="price"><span>تومان</span> ۰</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> دسترسی به دستیار هوشمند (محدود)</li>
+                        <li><i class="fas fa-check"></i> ۱۰۰۰ کلمه پردازش در ماه</li>
+                        <li><i class="fas fa-check"></i> پشتیبانی استاندارد</li>
+                        <li><i class="fas fa-times"></i> مدیریت پیشرفته فایل</li>
+                        <li><i class="fas fa-times"></i> تحلیل داده نامحدود</li>
+                    </ul>
+                    <a href="/register" class="btn">شروع رایگان</a>
+                </div>
+
+                <div class="pricing-plan featured">
+                    <h3>پلن حرفه‌ای</h3>
+                    <div class="price"><span>تومان</span> ۱۵۰,۰۰۰</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> دسترسی کامل به دستیار هوشمند</li>
+                        <li><i class="fas fa-check"></i> ۵۰,۰۰۰ کلمه پردازش در ماه</li>
+                        <li><i class="fas fa-check"></i> پشتیبانی اولویت‌دار</li>
+                        <li><i class="fas fa-check"></i> مدیریت پیشرفته فایل</li>
+                        <li><i class="fas fa-times"></i> تحلیل داده نامحدود</li>
+                    </ul>
+                    <a href="/register" class="btn">همین حالا بخرید</a>
+                </div>
+
+                <div class="pricing-plan">
+                    <h3>پلن سازمانی</h3>
+                    <div class="price"><span>تومان</span> سفارشی</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> دسترسی کامل به تمام قابلیت‌ها</li>
+                        <li><i class="fas fa-check"></i> پردازش نامحدود کلمه</li>
+                        <li><i class="fas fa-check"></i> پشتیبانی ۲۴/۷ اختصاصی</li>
+                        <li><i class="fas fa-check"></i> مدیریت پیشرفته فایل</li>
+                        <li><i class="fas fa-check"></i> تحلیل داده نامحدود</li>
+                    </ul>
+                    <a href="/contact" class="btn">تماس برای جزئیات</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

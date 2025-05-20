@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | هوما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container">
+        <section id="contact">
+            <h2>تماس با هوما</h2>
+            <p class="section-description">برای هرگونه سوال، پیشنهاد، یا پشتیبانی، از طریق راه‌های ارتباطی زیر با ما در تماس باشید. ما آماده پاسخگویی به شما هستیم.</p>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>آدرس</h3>
+                    <p>ایران، تهران، خیابان آزادی، پلاک ۱۲۳، واحد ۴</p>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>تلفن</h3>
+                    <p>+۹۸ ۲۱ ۱۲۳ ۴۵۶۷</p>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <h3>ایمیل</h3>
+                    <p><a href="mailto:info@homa-ai.com">info@homa-ai.com</a></p>
+                </div>
+            </div>
+
+            <div class="form-container" style="max-width: 600px; margin-top: 50px;">
+                <h3>ارسال پیام</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">نام شما:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">ایمیل شما:</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">موضوع:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">پیام شما:</label>
+                        <textarea id="message" name="message" rows="6" required style="width: calc(100% - 22px); padding: 12px 10px; border: 1px solid #ced4da; border-radius: 5px; font-size: 1.1em; text-align: right; direction: rtl;"></textarea>
+                    </div>
+                    <button type="submit" class="btn">ارسال پیام</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+        // Simple form submission handler for contact form (client-side only for now)
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // In a real application, you would send this data to a backend API
+            // For now, just simulate success
+            alert(`پیام شما دریافت شد!\nنام: ${name}\nایمیل: ${email}\nموضوع: ${subject}\nپیام: ${message}\n\n(این فقط یک شبیه‌سازی است، پیامی ارسال نشده است.)`);
+
+            // Clear the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

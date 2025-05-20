@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هوما | دستیار هوشمند شما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container">
+        <section id="hero">
+            <h1>به هوما خوش آمدید!</h1>
+            <p>دستیار هوشمند شما برای مدیریت وظایف، اطلاعات و ارتباطات روزمره با قدرت هوش مصنوعی.</p>
+            <a href="/register" class="btn">شروع کنید</a>
+            <a href="/services" class="btn btn-secondary">خدمات ما</a>
+        </section>
+
+        <section id="features">
+            <h2>ویژگی‌های کلیدی هوما</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-robot fa-3x"></i>
+                    <h3>پردازش زبان طبیعی پیشرفته</h3>
+                    <p>هوما با درک عمیق از زبان شما، بهترین پاسخ‌ها و راه حل‌ها را ارائه می‌دهد.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-alt fa-3x"></i>
+                    <h3>مدیریت هوشمند فایل‌ها</h3>
+                    <p>فایل‌های خود را به سادگی پیدا کنید، طبقه‌بندی و سازماندهی کنید.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-globe fa-3x"></i>
+                    <h3>پشتیبانی چندزبانه</h3>
+                    <p>با هوما به زبان‌های مختلف دنیا به راحتی ارتباط برقرار کنید.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line fa-3x"></i>
+                    <h3>ابزارهای تحلیلی و گزارش‌دهی</h3>
+                    <p>داده‌های خود را تجزیه و تحلیل کنید و گزارش‌های جامع دریافت کنید.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock fa-3x"></i>
+                    <h3>امنیت و حریم خصوصی</h3>
+                    <p>اطلاعات شما با بالاترین استانداردهای امنیتی محافظت می‌شود.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-plug fa-3x"></i>
+                    <h3>قابلیت اتصال به APIها</h3>
+                    <p>اتصال به سرویس‌های ابری و ابزارهای شخص ثالث برای افزایش کارایی.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>درباره هوما</h2>
+            <p>هوما یک پروژه پیشرفته در زمینه هوش مصنوعی است که با هدف آسان‌تر کردن زندگی روزمره شما طراحی شده است. ما در تلاشیم تا با ارائه یک دستیار هوشمند و قابل اعتماد، به شما در مدیریت زمان، دسترسی به اطلاعات دقیق و افزایش بهره‌وری کمک کنیم. ما به تعهد خود برای نوآوری و ارائه بهترین تجربه کاربری افتخار می‌کنیم.</p>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زبان‌ها | هوما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container">
+        <section id="languages">
+            <h2>زبان‌های پشتیبانی شده</h2>
+            <p class="section-description">هوما در تلاش است تا موانع زبانی را از بین ببرد و با پشتیبانی از زبان‌های مختلف، تجربه کاربری جهانی را فراهم کند. روی نقشه کلیک کنید تا اطلاعات بیشتری درباره هر زبان به دست آورید.</p>
+            
+            <div class="map-container">
+                <img id="world-map" src="assets/images/world-map.svg" alt="نقشه جهان">
+                </div>
+
+            <div id="language-details" class="language-info">
+                </div>
+
+            <div class="language-selector-section" style="margin-top: 40px; text-align: center;">
+                <h3>یا از لیست زیر انتخاب کنید:</h3>
+                <select id="language-selector" class="form-control" style="padding: 10px; border-radius: 5px; border: 1px solid #ced4da; font-size: 1.1em; margin-top: 15px;">
+                    <option value="">-- زبان را انتخاب کنید --</option>
+                    <option value="fa">فارسی (Persian)</option>
+                    <option value="en">انگلیسی (English)</option>
+                    <option value="ar">عربی (Arabic)</option>
+                    <option value="es">اسپانیایی (Spanish)</option>
+                    <option value="zh">چینی (Chinese)</option>
+                    </select>
+                <p id="selected-language-info" style="margin-top: 20px; font-size: 1.1em; color: #495057;"></p>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/map-language.js"></script>
+</body>
+</html>

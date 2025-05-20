@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما | هوما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container">
+        <section id="about">
+            <h2>درباره هوما</h2>
+            <p>هوما یک پروژه پیشرفته در زمینه هوش مصنوعی است که با هدف آسان‌تر کردن زندگی روزمره شما طراحی شده است. ما در تلاشیم تا با ارائه یک دستیار هوشمند، قابل اعتماد و چندمنظوره، به شما در مدیریت زمان، دسترسی به اطلاعات دقیق و افزایش بهره‌وری کمک کنیم. چشم‌انداز ما ایجاد یک هوش مصنوعی است که نه تنها وظایف شما را تسهیل کند، بلکه به عنوان یک همکار هوشمند، شما را در رسیدن به اهدافتان یاری رساند.</p>
+            
+            <h3>ماموریت ما</h3>
+            <p>ماموریت هوما، توانمندسازی افراد و کسب‌وکارها از طریق ارائه ابزارهای هوش مصنوعی نوآورانه و قابل دسترس است. ما متعهد به ساخت سیستمی هستیم که به طور مداوم یاد می‌گیرد و بهبود می‌یابد تا بهترین تجربه ممکن را ارائه دهد.</p>
+
+            <h3>تیم ما</h3>
+            <p>تیم هوما متشکل از متخصصان برجسته در زمینه هوش مصنوعی، یادگیری ماشین، توسعه نرم‌افزار و طراحی تجربه کاربری است. ما با شور و اشتیاق فراوان برای ایجاد محصولی که زندگی را تغییر دهد، تلاش می‌کنیم.</p>
+            
+            <div class="about-vision" style="text-align: center; margin-top: 50px;">
+                <i class="fas fa-lightbulb fa-4x" style="color: #007bff; margin-bottom: 20px;"></i>
+                <h3>چشم‌انداز ما</h3>
+                <p>ما به آینده‌ای اعتقاد داریم که هوش مصنوعی به سادگی و کارایی در زندگی روزمره هر فردی ادغام شود، به آنها امکان دهد تا بر روی آنچه واقعاً مهم است تمرکز کنند و به پتانسیل کامل خود دست یابند.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

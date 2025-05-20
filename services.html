@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات ما | هوما</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('afterbegin', html);
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <div class="container">
+        <section id="services">
+            <h2>خدمات اصلی هوما</h2>
+            
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-comments"></i></div>
+                <div class="service-content">
+                    <h3>دستیار مکالمه هوشمند</h3>
+                    <p>هوما با استفاده از پیشرفته‌ترین مدل‌های زبان (مانند GPT)، قادر به درک عمیق سوالات و درخواست‌های شما و ارائه پاسخ‌های دقیق و مرتبط است. از مکالمه آزاد تا انجام وظایف خاص، هوما همیشه آماده کمک است.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-folder"></i></div>
+                <div class="service-content">
+                    <h3>مدیریت و سازماندهی اطلاعات</h3>
+                    <p>دیگر نگران گم شدن فایل‌ها و اطلاعات خود نباشید. هوما به شما کمک می‌کند تا فایل‌های خود را به صورت هوشمند طبقه‌بندی، جستجو و سازماندهی کنید، و دسترسی سریع به هر آنچه نیاز دارید را فراهم می‌آورد.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                <div class="service-content">
+                    <h3>مدیریت وظایف و برنامه‌ریزی</h3>
+                    <p>وظایف روزانه خود را به هوما بسپارید. از ایجاد لیست وظایف و یادآوری‌ها گرفته تا برنامه‌ریزی جلسات و مدیریت تقویم، هوما بهره‌وری شما را افزایش می‌دهد.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-language"></i></div>
+                <div class="service-content">
+                    <h3>پشتیبانی چندزبانه</h3>
+                    <p>هوما مرزهای زبانی را در هم می‌شکند. با پشتیبانی از چندین زبان، می‌توانید با هوما به زبان دلخواه خود ارتباط برقرار کنید و از خدمات آن در سراسر جهان بهره‌مند شوید.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="service-content">
+                    <h3>تحلیل داده و گزارش‌گیری</h3>
+                    <p>داده‌های خود را به هوما بسپارید تا آن‌ها را تحلیل کند و گزارش‌های جامع و قابل فهمی ارائه دهد. این ابزار برای تصمیم‌گیری‌های هوشمندانه در کسب و کار و زندگی شخصی شما ایده‌آل است.</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
